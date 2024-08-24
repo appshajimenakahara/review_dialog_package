@@ -25,11 +25,11 @@ Future<void> showReviewDialog({
               const SizedBox(height: 30),
               AppButton(height: 50, width: 200, color: Colors.white, fontColor: Colors.black87, borderColor: Colors.black54, title: okButtonText, onPressed: () {
                 Navigator.of(context).pop();
+                _launchReviewPage(appReviewUrl);
               }),
               const SizedBox(height: 2),
               AppButton(height: 50, width: 200, color: Colors.white, fontColor: Colors.black87, borderColor: Colors.black54, title: cancelButtonText, onPressed: () {
                 Navigator.of(context).pop();
-                _launchReviewPage(appReviewUrl);
               }),
               const SizedBox(height: 2),
             ],
