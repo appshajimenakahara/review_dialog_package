@@ -31,7 +31,7 @@ Future<void> showReviewDialog({
                 Navigator.of(context).pop();
                 _launchReviewPage(appReviewUrl);
               }),
-              const SizedBox(height: 10),
+              const SizedBox(height: 2),
             ],
           ),
         ),
