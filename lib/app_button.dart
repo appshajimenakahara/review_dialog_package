@@ -63,9 +63,8 @@ class AppButton extends StatelessWidget {
             title,
             style: TextStyle(
               color: fontColor ?? Colors.white,
-              fontFamily: 'HiraginoKakuGothicProN',
               fontWeight: fontWeight ?? FontWeight.normal,
-              fontSize: fontSize ?? 20,
+              fontSize: 14,
             ),
           )
               : Row(
@@ -75,9 +74,8 @@ class AppButton extends StatelessWidget {
                 title,
                 style: TextStyle(
                   color: fontColor ?? Colors.white,
-                  fontFamily: 'HiraginoKakuGothicProN',
                   fontWeight: fontWeight ?? FontWeight.normal,
-                  fontSize: fontSize ?? 20,
+                  fontSize: 14,
                 ),
               ),
             ],
