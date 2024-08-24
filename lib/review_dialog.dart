@@ -17,16 +17,23 @@ Future<void> showReviewDialog({
         title: Text(title),
         shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(12.0))),
-        content: Text(message),
-        actions: <Widget>[
-          AppButton(height: 50, width: 140, color: Colors.white, fontColor: Colors.black87, borderColor: Colors.black54, title: cancelButtonText, onPressed: () {
-            Navigator.of(context).pop();
-            _launchReviewPage(appReviewUrl);
-          }),
-          AppButton(height: 50, width: 140, color: Colors.white, fontColor: Colors.black87, borderColor: Colors.black54, title: okButtonText, onPressed: () {
-            Navigator.of(context).pop();
-          }),
-        ],
+        content: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(message),
+            const SizedBox(height: 14),
+            AppButton(height: 50, width: 200, color: Colors.white, fontColor: Colors.black87, borderColor: Colors.black54, title: okButtonText, onPressed: () {
+              Navigator.of(context).pop();
+            }),
+            const SizedBox(height: 10),
+            AppButton(height: 50, width: 200, color: Colors.white, fontColor: Colors.black87, borderColor: Colors.black54, title: cancelButtonText, onPressed: () {
+              Navigator.of(context).pop();
+              _launchReviewPage(appReviewUrl);
+            }),
+            const SizedBox(height: 10),
+          ],
+        ),
+        actions: [],
       );
     },
   );

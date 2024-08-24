@@ -64,7 +64,7 @@ class AppButton extends StatelessWidget {
             style: TextStyle(
               color: fontColor ?? Colors.white,
               fontWeight: fontWeight ?? FontWeight.normal,
-              fontSize: 14,
+              fontSize: 16,
             ),
           )
               : Row(
@@ -75,7 +75,7 @@ class AppButton extends StatelessWidget {
                 style: TextStyle(
                   color: fontColor ?? Colors.white,
                   fontWeight: fontWeight ?? FontWeight.normal,
-                  fontSize: 14,
+                  fontSize: 16,
                 ),
               ),
             ],
