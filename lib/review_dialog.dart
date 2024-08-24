@@ -1,34 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:review_dialog_package/app_button.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 Future<void> showReviewDialog({
   required BuildContext context,
   required String appReviewUrl,
-  String title = 'アプリを楽しんでいますか？',
-  String message = 'もしよろしければ、アプリストアでレビューをお願いします。',
-  String okButtonText = 'レビューする',
-  String cancelButtonText = '今はしない',
+  required String title,
+  required String message,
+  required String okButtonText,
+  required String cancelButtonText,
 }) async {
   return showDialog(
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
         title: Text(title),
+        shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(12.0))),
         content: Text(message),
         actions: <Widget>[
-          TextButton(
-            child: Text(cancelButtonText),
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-          ),
-          TextButton(
-            child: Text(okButtonText),
-            onPressed: () {
-              Navigator.of(context).pop();
-              _launchReviewPage(appReviewUrl);
-            },
-          ),
+          AppButton(height: 60, width: 100, color: Colors.white, borderColor: Colors.black54, title: okButtonText, onPressed: () {
+            Navigator.of(context).pop();
+          }),
+          AppButton(height: 60, width: 100, color: Colors.white, borderColor: Colors.black54, title: cancelButtonText, onPressed: () {
+            Navigator.of(context).pop();
+            _launchReviewPage(appReviewUrl);
+          }),
         ],
       );
     },
