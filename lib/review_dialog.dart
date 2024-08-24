@@ -19,11 +19,11 @@ Future<void> showReviewDialog({
             borderRadius: BorderRadius.all(Radius.circular(12.0))),
         content: Text(message),
         actions: <Widget>[
-          AppButton(height: 50, width: 120, color: Colors.white, fontColor: Colors.black87, borderColor: Colors.black54, title: cancelButtonText, onPressed: () {
+          AppButton(height: 50, width: 140, color: Colors.white, fontColor: Colors.black87, borderColor: Colors.black54, title: cancelButtonText, onPressed: () {
             Navigator.of(context).pop();
             _launchReviewPage(appReviewUrl);
           }),
-          AppButton(height: 50, width: 120, color: Colors.white, fontColor: Colors.black87, borderColor: Colors.black54, title: okButtonText, onPressed: () {
+          AppButton(height: 50, width: 140, color: Colors.white, fontColor: Colors.black87, borderColor: Colors.black54, title: okButtonText, onPressed: () {
             Navigator.of(context).pop();
           }),
         ],
